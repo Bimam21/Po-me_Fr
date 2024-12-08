@@ -41,7 +41,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Vérifier les résultats
     if ($result && $result->num_rows == 1) {
-        header("Location: https://bimam21.github.io/Po-me_Fr/Declaration.html");
+        header("Location: https://bimam21.github.io/Po-me_Fr/Declaration.html", true, 301);
+        exit();
         exit();
     } else {
         echo "Nom d'utilisateur ou mot de passe incorrect.";
